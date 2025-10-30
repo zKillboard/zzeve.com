@@ -66,6 +66,9 @@
         .card-body .btn-container {
             margin-top: auto;
         }
+        .card-text {
+            min-height: 3rem;
+        }
         .github-btn {
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.2);
@@ -315,6 +318,35 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Drop -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card tool-card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <div class="tool-logo mb-3 mx-auto d-flex align-items-center justify-content-center" style="background: linear-gradient(135deg, #dc3545 0%, #ff6b6b 100%);">
+                                    <i class="bi bi-database-dash text-white" style="font-size: 2.5rem;"></i>
+                                </div>
+                            </div>
+                            <h5 class="card-title">Drop</h5>
+                            <p class="card-text text-muted">Time to practice unscheduled restoration tests.</p>
+                            <div class="btn-container">
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <button class="btn btn-danger w-100" style="cursor: pointer;">
+                                            <i class="bi bi-trash3"></i> DROP DB
+                                        </button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button class="btn github-btn text-white w-100" disabled style="cursor: not-allowed;">
+                                            <i class="bi bi-clock-history"></i> Backup
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -330,7 +362,7 @@
                     <a href="https://github.com/zKillboard" class="text-decoration-none me-3">
                         <i class="bi bi-github"></i> GitHub
                     </a>
-                    <a href="https://discord.gg/zkillboard" class="text-decoration-none">
+                    <a href="https://discord.gg/sV2kkwg8UD" class="text-decoration-none">
                         <i class="bi bi-discord"></i> Discord
                     </a>
                 </div>
@@ -340,5 +372,31 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Easter egg: Play structure warning sound when DROP button is clicked
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropButton = document.querySelector('.btn-danger');
+            if (dropButton) {
+                dropButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Create and play audio
+                    const audio = new Audio('sounds/structureWarning.mp3');
+                    audio.volume = 0.3; // Set to 30% volume to not be too loud
+                    
+                    audio.play().catch(function(error) {
+                        console.log('Audio playback failed:', error);
+                    });
+                    
+                    // Brief visual feedback
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 100);
+                });
+            }
+        });
+    </script>
 </body>
 </html>
