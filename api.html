@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<script type="text/javascript" language="Javascript">
+  function getValue($id) {
+    return document.getElementById($id).value;
+  }
+
+  function submit($url, $keys) { 
+    if ($keys == null) $keys = new Array('characterID', 'keyID', 'vCode');
+
+    $fullUrl = 'http://api.eveonline.com' + $url + '?';
+    for ($key in $keys) {
+      $id = $keys[$key];
+      $value = getValue($id);
+      $fullUrl += "&" + $id + "=" + $value;
+    }
+
+    window.open($fullUrl);
+  }
+</script>
+<body>
+  <table>
+    <tr><td>Char ID:</td><td><input id="characterID" type="text" maxlength="12" size="15" /></td></tr>
+    <tr><td>Key ID:</td><td><input id="keyID" type="text" maxlength="12" size="15" /></td></tr>
+    <tr><td>Code:</td><td><input id="vCode" type="text" maxlength="64" size="70" /></td></tr>
+  </table>
+
+  <a href="https://support.eveonline.com/api" target="_blank">Obtain your API here.</a>
+
+  <fieldset><legend>Account</legend>
+    <input type="button" value="API Key Info" 		onclick="submit('/account/APIKeyInfo.xml.aspx', new Array('keyID', 'vCode'));"/><br/> 
+    <input type="button" value="Character List" 		onclick="submit('/account/Characters.xml.aspx', new Array('keyID', 'vCode'));"/><br/> 
+	<input type="button" value="Character Info"		onclick="submit('/eve/CharacterInfo.xml.aspx', new Array('characterID'));"/><br/>
+    <input type="button" value="Status" 		onclick="submit('/account/AccountStatus.xml.aspx', new Array('keyID', 'vCode'));"/><br/> 
+  </fieldset>
+
+  <fieldset><legend>Character</legend>
+    <input type="button" value="Account Balances"	 	onclick="submit('/char/AccountBalance.xml.aspx');"/>
+    <input type="button" value="Asset List" 			onclick="submit('/char/AssetList.xml.aspx');"/><br/>
+    <input type="button" value="Calendar Event" 		onclick="submit('/char/CalendarEventAttendees.xml.aspx');"/>
+    <input type="button" value="Character Sheet" 		onclick="submit('/char/CharacterSheet.xml.aspx');"/>
+    <input type="button" value="Contact List" 			onclick="submit('/char/ContactList.xml.aspx');"/>
+    <input type="button" value="Contact Notifications" 		onclick="submit('/char/ContactNotifications.xml.aspx');"/><br/>
+    <input type="button" value="Factional Warfare Stats" 	onclick="submit('/char/FacWarStats.xml.aspx');"/><br/>
+    <input type="button" value="Industry Jobs" 			onclick="submit('/char/IndustryJobs.xml.aspx');"/><br/>
+    <input type="button" value="Kill Mails" 			onclick="submit('/char/KillMails.xml.aspx');"/><br/>
+    <input type="button" value="Mailing Lists" 			onclick="submit('/char/MailingLists.xml.aspx');"/>
+    <input type="button" value="Mail Messages" 			onclick="submit('/char/MailMessages.xml.aspx');"/>
+    <input type="button" value="Market Orders" 			onclick="submit('/char/MarketOrders.xml.aspx');"/>
+    <input type="button" value="Medals" 			onclick="submit('/char/Medals.xml.aspx');"/>
+    <input type="button" value="Notifications" 			onclick="submit('/char/Notifications.xml.aspx');"/><br/>
+    <input type="button" value="Research" 			onclick="submit('/char/Research.xml.aspx');"/><br/>
+    <input type="button" value="Skill in Training" 		onclick="submit('/char/SkillInTraining.xml.aspx')"/>
+    <input type="button" value="Skill Queue" 			onclick="submit('/char/SkillQueue.xml.aspx');"/>
+    <input type="button" value="Standings" 			onclick="submit('/char/Standings.xml.aspx');"/>
+    <input type="button" value="Upcoming Calendar Events" 	onclick="submit('/char/UpcomingCalendarEvents.xml.aspx');"/><br/>
+    <input type="button" value="Wallet Journal" 		onclick="submit('/char/WalletJournal.xml.aspx');"/>
+    <input type="button" value="Wallet Transactions" 		onclick="submit('/char/WalletTransactions.xml.aspx');"/>
+  </fieldset>
+
+  <fieldset><legend>Corporation</legend>
+    <input type="button" value="Account Balances"		onclick="submit('/corp/AccountBalance.xml.aspx');"/>
+    <input type="button" value="Asset List"			onclick="submit('/corp/AssetList.xml.aspx');" /><br/>
+    <input type="button" value="Calendar Event Attendees"	onclick="submit('/corp/CalendarEventAttendees.xml.aspx');"/>
+    <input type="button" value="Contact List"			onclick="submit('/corp/ContactList.xml.aspx');"/>
+    <input type="button" value="Container Log"			onclick="submit('/corp/ContainerLog.xml.aspx');"/>
+    <input type="button" value="Corporation Sheet"		onclick="submit('/corp/CorporationSheet.xml.aspx');"/><br/>
+    <input type="button" value="Factional Warfare Stats"	onclick="submit('/corp/FacWarStats.xml.aspx');"/><br/>
+    <input type="button" value="Kill Mails"			onclick="submit('/corp/KillMails.xml.aspx');"/><br/>
+    <input type="button" value="Market Orders"			onclick="submit('/corp/MarketOrders.xml.aspx');"/>
+    <input type="button" value="Medals"				onclick="submit('/corp/Medals.xml.aspx');"/>
+    <input type="button" value="Member Medals"			onclick="submit('/corp/MemberMedals.xml.aspx');"/>
+    <input type="button" value="Member Security"		onclick="submit('/corp/MemberSecurity.xml.aspx');"/>
+    <input type="button" value="Member Security Log"		onclick="submit('/corp/MemberSecurityLog.xml.aspx');"/>
+    <input type="button" value="Member Tracking"		onclick="submit('/corp/MemberTracking.xml.aspx');"/><br/>
+    <input type="button" value="Outpost List"			onclick="submit('/corp/OutpostList.xml.aspx');"/>
+    <input type="button" value="Outpost Service Detail"		onclick="submit('/corp/OutpostServiceDetail.xml.aspx');"/><br/>
+    <input type="button" value="POS Details"			onclick="submit('/corp/StarbaseDetail.xml.aspx');"/>
+    <input type="button" value="POS List"			onclick="submit('/corp/StarbaseList.xml.aspx');"/>
+    <input type="button" value="Shareholder"			onclick="submit('/corp/Shareholders.xml.aspx');"/>
+    <input type="button" value="Standings"			onclick="submit('/corp/Standings.xml.aspx');"/><br/>
+    <input type="button" value="Titles"				onclick="submit('/corp/Titles.xml.aspx');"/><br/>
+    <input type="button" value="Wallet Journal"			onclick="submit('/corp/WalletJournal.xml.aspx');"/>
+    <input type="button" value="Wallet Transactions"		onclick="submit('/corp/WalletTransactions.xml.aspx');"/>
+  </fieldset>
+
+  <fieldset><legend>Eve</legend>
+    <input type="button" value="Alliance List"			onclick="submit('/eve/AllianceList.xml.aspx', new Array());"/><br/>
+    <input type="button" value="Certificate Tree"		onclick="submit('/eve//eve/CertificateTree.xml.aspx', new Array());"/>
+    <input type="button" value="Conquerable Station/Outpost List" onclick="submit('/eve/ConquerableStationList.xml.aspx', new Array());"/>
+    <input type="button" value="Error List"			onclick="submit('/eve/ErrorList.xml.aspx', new Array());"/><br/>
+    <input type="button" value="Factional Warfare Stats"	onclick="submit('/eve/FacWarStats.xml.aspx', new Array());"/>
+    <input type="button" value="Factional Warfare Top 100 Stats" onclick="submit('/eve/FacWarTopStats.xml.aspx', new Array());"/><br/>
+
+    <input type="text" id="ids"/>
+    <input type="button" value="ID to Name Conversion"		onclick="submit('/eve/CharacterName.xml.aspx', new Array('ids'));"/><br/>
+
+    <input type="text" id="names"/>
+    <input type="button" value="Name to ID Conversion"		onclick="submit('/eve/CharacterID.xml.aspx', new Array('names'));"/><br/>
+
+    <input type="text" id="characterId">
+    <input type="button" value="Character Sheet"		onclick="submit('/eve/CharacterInfo.xml.aspx', new Array('characterId'));"/><br/>
+
+    <input type="text" id="corporationID">
+    <input type="button" value="Corporation Sheet" 		onclick="submit('/corp/CorporationSheet.xml.aspx', new Array('corporationID'));"/><br/>
+
+    <input type="button" value="RefTypes List"			onclick="submit('/eve/RefTypes.xml.aspx', new Array());"/><br/>
+    <input type="button" value="Skill Tree"			onclick="submit('/eve/SkillTree.xml.aspx', new Array());"/>
+</body>
+</html>
