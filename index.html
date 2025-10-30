@@ -1,6 +1,324 @@
-<html>
-<title>zzeve.com</title>
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zzeve.com - EVE Online Tools by zKillboard</title>
+    <link rel="icon" type="image/png" href="https://images.evetech.net/characters/1633218082/portrait?size=128">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+        }
+        .main-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .tool-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        .tool-card:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        .tool-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .hero-section {
+            background: linear-gradient(45deg, #0d6efd, #6610f2);
+            color: white;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+        }
+        .card-body .btn-container {
+            margin-top: auto;
+        }
+        .github-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+        }
+        .github-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
 <body>
-<pre>Hello there...</pre>
+    <div class="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-3">Squizz's Eve Tool Suite</h1>
+                    <p class="lead mb-4">A comprehensive suite of tools and services for the EVE Online community, developed and maintained by <a href="https://zkillboard.com/character/1633218082/" class="text-white text-decoration-none" style="border-bottom: 1px dotted rgba(255,255,255,0.5);">Squizz Caphinator</a>.</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <img src="eve-logo.jpg" alt="EVE Online Logo" style="max-width: 150px; height: auto; opacity: 0.9; border-radius: 1em;">
+                </div>
+            </div>
+        </div> 
+    </section>
+
+    <!-- Tools Grid -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- zKillboard -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card tool-card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <img src="https://zkillboard.com/img/logo.png" alt="zKillboard Logo" class="tool-logo mb-3" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iMTAiIGZpbGw9IiNkYzM1NDUiLz4KPHRleHQgeD0iNDAiIHk9IjQ1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+eks8L3RleHQ+Cjwvc3ZnPg=='">
+                            </div>
+                            <h5 class="card-title">zKillboard</h5>
+                            <p class="card-text text-muted">The premier killboard for EVE Online, tracking kills, losses, and statistics across New Eden.</p>
+                            <div class="btn-container">
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <a href="https://zkillboard.com" class="btn btn-primary w-100">
+                                            <i class="bi bi-box-arrow-up-right"></i> Visit Site
+                                        </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="https://github.com/zKillboard/zKillboard" class="btn github-btn text-white w-100">
+                                            <i class="bi bi-github"></i> GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EVEWho -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card tool-card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <img src="https://image.eveonline.com/Character/1_64.jpg" alt="EVEWho Logo" class="tool-logo mb-3" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iMTAiIGZpbGw9IiMyOGE3NDUiLz4KPHRleHQgeD0iNDAiIHk9IjQ1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+V0hPPC90ZXh0Pgo8L3N2Zz4='">
+                            </div>
+                            <h5 class="card-title">EVEWho</h5>
+                            <p class="card-text text-muted">Character and corporation lookup service providing detailed information about EVE Online entities.</p>
+                            <div class="btn-container">
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <a href="https://evewho.com" class="btn btn-primary w-100">
+                                            <i class="bi bi-box-arrow-up-right"></i> Visit Site
+                                        </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="https://github.com/zKillboard/evewho" class="btn github-btn text-white w-100">
+                                            <i class="bi bi-github"></i> GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- zKillBot -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card tool-card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <img src="https://zkillboard.com/img/logo.png" alt="zKillBot Logo" class="tool-logo mb-3" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iMTAiIGZpbGw9IiM2ZjQyYzEiLz4KPHRleHQgeD0iNDAiIHk9IjQ1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjAiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+QkJUPC90ZXh0Pgo8L3N2Zz4='">
+                            </div>
+                            <h5 class="card-title">zKillBot</h5>
+                            <p class="card-text text-muted">Discord bot providing killmail notifications and killboard integration for your Discord server.</p>
+                            <div class="btn-container">
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <a href="https://discord.com/oauth2/authorize?client_id=1422039566721876069&permissions=2048&integration_type=0&scope=bot+applications.commands" class="btn btn-primary w-100">
+                                            <i class="bi bi-discord"></i> Add Bot
+                                        </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="https://github.com/zKillboard/zKillBot" class="btn github-btn text-white w-100">
+                                            <i class="bi bi-github"></i> GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RedisQ -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card tool-card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <div class="tool-logo mb-3 mx-auto d-flex align-items-center justify-content-center" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);">
+                                    <i class="bi bi-water text-white" style="font-size: 2.5rem;"></i>
+                                </div>
+                            </div>
+                            <h5 class="card-title">RedisQ</h5>
+                            <p class="card-text text-muted">Near real-time killmail streaming service providing access to killmail data from zKillboard.</p>
+                            <div class="btn-container">
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <a href="https://zkillredisq.stream" class="btn btn-primary w-100">
+                                            <i class="bi bi-box-arrow-up-right"></i> See Stats
+                                        </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="https://github.com/zKillboard/RedisQ" class="btn github-btn text-white w-100">
+                                            <i class="bi bi-github"></i> GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Podmail -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card tool-card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <img src="https://podmail.zzeve.com/favicon.ico" alt="Podmail Logo" class="tool-logo mb-3" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iMTAiIGZpbGw9IiMxNzljZjEiLz4KPHRleHQgeD0iNDAiIHk9IjQ1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UE9EPC90ZXh0Pgo8L3N2Zz4='">
+                            </div>
+                            <h5 class="card-title">Podmail</h5>
+                            <p class="card-text text-muted">Eve-mail web service for EVE Online mails, supporting various mail features and multiple characters.</p>
+                            <div class="btn-container">
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <a href="https://podmail.zzeve.com" class="btn btn-primary w-100">
+                                            <i class="bi bi-box-arrow-up-right"></i> Visit Site
+                                        </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="https://github.com/zKillboard/podmail" class="btn github-btn text-white w-100">
+                                            <i class="bi bi-github"></i> GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EVEconomy -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card tool-card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <img src="https://eveconomy.online/favicon.ico" alt="EVEconomy Logo" class="tool-logo mb-3" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iMTAiIGZpbGw9IiMyOGE3NDUiLz4KPHRleHQgeD0iNDAiIHk9IjQ1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+RUNPTjwvdGV4dD4KPC9zdmc+'">
+                            </div>
+                            <h5 class="card-title">EVEconomy</h5>
+                            <p class="card-text text-muted">Fast market data lookup for any item across New Eden.</p>
+                            <div class="btn-container">
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <a href="https://eveconomy.online" class="btn btn-primary w-100">
+                                            <i class="bi bi-box-arrow-up-right"></i> Visit Site
+                                        </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="https://github.com/zKillboard/eveconomy" class="btn github-btn text-white w-100">
+                                            <i class="bi bi-github"></i> GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SkillQ -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card tool-card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <img src="https://image.eveonline.com/Type/3389_64.png" alt="SkillQ Logo" class="tool-logo mb-3" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iMTAiIGZpbGw9IiNmZmMxMDciLz4KPHRleHQgeD0iNDAiIHk9IjQ1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSJibGFjayIgdGV4dC1hbmNob3I9Im1pZGRsZSI+U0tJTEw8L3RleHQ+Cjwvc3ZnPg=='">
+                            </div>
+                            <h5 class="card-title">SkillQ</h5>
+                            <p class="card-text text-muted">Skill monitoring tool for all your characters in Eve Online.</p>
+                            <div class="btn-container">
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <a href="https://skillq.net" class="btn btn-primary w-100">
+                                            <i class="bi bi-box-arrow-up-right"></i> Visit Site
+                                        </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="https://github.com/cvweiss/skillq" class="btn github-btn text-white w-100">
+                                            <i class="bi bi-github"></i> GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SDE -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card tool-card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <img src="https://sde.zzeve.com/favicon.ico" alt="SDE Logo" class="tool-logo mb-3" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iMTAiIGZpbGw9IiMwZDZlZmQiLz4KPHRleHQgeD0iNDAiIHk9IjQ1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+U0RFPC90ZXh0Pgo8L3N2Zz4='">
+                            </div>
+                            <h5 class="card-title">SDE</h5>
+                            <p class="card-text text-muted">Static Data Export tools and API for accessing EVE Online's game data.</p>
+                            <div class="btn-container">
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <a href="https://sde.zzeve.com" class="btn btn-primary w-100">
+                                            <i class="bi bi-box-arrow-up-right"></i> Visit API
+                                        </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="https://github.com/cvweiss/sde2json" class="btn github-btn text-white w-100">
+                                            <i class="bi bi-github"></i> GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 border-top border-secondary">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">&copy; 2025 zKillboard. All tools are provided free to the EVE Online community.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="https://github.com/zKillboard" class="text-decoration-none me-3">
+                        <i class="bi bi-github"></i> GitHub
+                    </a>
+                    <a href="https://discord.gg/zkillboard" class="text-decoration-none">
+                        <i class="bi bi-discord"></i> Discord
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
